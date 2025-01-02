@@ -1,1 +1,0 @@
-# _coro_photo

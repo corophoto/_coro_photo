@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>굴러들어온 일상</title>
+  <style>
+/* Reset and basic styling */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Header styles */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+header .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul.menu li {
+  margin-left: 20px;
+}
+
+header nav ul.menu li a {
+  text-decoration: none;
+  color: #0073e6;
+  font-weight: bold;
+}
+
+header nav ul.menu li a:hover {
+  color: #005bb5;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 120px 20px 50px;
+  background-color: #e3f2fd;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Gallery section */
+/* Gallery section */
+.gallery {
+    padding: 20px;
+  }
+
+  .gallery h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+
+  /* 슬라이더 컨테이너 스타일 */
+  .slider {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden; /* 슬라이드 밖의 부분은 숨깁니다 */
+  }
+
+  /* 슬라이드 이미지들을 담는 컨테이너 */
+  .slider .slides {
+    display: flex;
+    transition: transform 0.5s ease; /* 이미지 전환 효과 */
+  }
+
+  /* 각 슬라이드 이미지 */
+  .slider .slide {
+    min-width: 100%;
+    transition: 0.5s ease;
+  }
+
+  .slider img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* 이전, 다음 버튼 */
+  .slider .prev, .slider .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .slider .prev {
+    left: 10px;
+  }
+
+  .slider .next {
+    right: 10px;
+  }
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">굴러들어온 일상</div>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">메인</a></li>
+        <li><a href="portfolio.html">포토폴리오</a></li>
+        <li><a href="shop.html">SHOP</a></li>
+        <li><a href="profile.html">프로필</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>굴러들어온 일상</h1>
+      <p>나의 시선이 나의 감정이 되어 나의 사진에 담기길...</p>
+    </section>
+
+    <section class="gallery">
+        <h2>추천 사진</h2>
+        <div class="slider">
+          <div class="slides">
+            <div class="slide">
+              <img src="photo1.jpg" alt="보랏빛 노을과 커플">
+              <div class="card-content">
+                <p>보랏빛 노을과 커플</p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="photo2.jpg" alt="우연히 발견한 교자가게">
+              <div class="card-content">
+                <p>우연히 발견한 교자가게</p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="photo3.jpg" alt="반가운 꽃">
+              <div class="card-content">
+                <p>반가운 꽃</p>
+              </div>
+            </div>
+          </div>
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
+        </div>
+    </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 굴러들어온 일상. @_coro_photo All Rights Reserved.</p>
+</footer>
+
+<!-- JavaScript 코드 추가 -->
+<script>
+  let currentSlide = 0; // 현재 슬라이드 번호
+  const slides = document.querySelectorAll('.slider .slide'); // 모든 슬라이드
+  const totalSlides = slides.length;
+  const slidesContainer = document.querySelector('.slider .slides'); // 슬라이드 컨테이너
+
+  // 다음 슬라이드로 이동
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlider();
+  }
+
+  // 이전 슬라이드로 이동
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateSlider();
+  }
+
+  // 슬라이드 이동
+  function updateSlider() {
+    slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+
+  // 다음, 이전 버튼 클릭 이벤트
+  document.querySelector('.next').addEventListener('click', nextSlide);
+  document.querySelector('.prev').addEventListener('click', prevSlide);
+
+  // 자동으로 슬라이드가 변경되도록 설정
+  setInterval(nextSlide, 3000); // 3초마다 자동으로 다음 슬라이드로 이동
+</script>
+</body>
+</html>
+
+  <footer>
+    <p>&copy; 2025 굴러들어온 일상. @_coro_photo All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>포토폴리오 - 굴러들어온 일상</title>
+  <style>
+/* Reset and basic styling */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Header styles */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+header .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul.menu li {
+  margin-left: 20px;
+}
+
+header nav ul.menu li a {
+  text-decoration: none;
+  color: #0073e6;
+  font-weight: bold;
+}
+
+header nav ul.menu li a:hover {
+  color: #005bb5;
+}
+
+/* Portfolio section */
+.portfolio {
+  padding: 120px 20px 50px;
+  background-color: #e3f2fd;
+}
+
+.portfolio h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.portfolio p {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+/* Portfolio gallery */
+.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.portfolio-gallery .portfolio-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-gallery .portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-gallery .portfolio-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.portfolio-card .portfolio-card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.portfolio-card .portfolio-card-content h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.portfolio-card .portfolio-card-content p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #777;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">굴러들어온 일상</div>
+    <nav>
+      <ul class="menu">
+        <li><a href="굴러들어온 일상.html">메인</a></li>
+        <li><a href="portfolio.html">포토폴리오</a></li>
+        <li><a href="shop.html">SHOP</a></li>
+        <li><a href="profile.html">프로필</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="portfolio">
+      <h1>나의 발자취</h1>
+      <p>그동안 제가 담아온 작품들을 소개합니다.</p>
+    </section>
+
+    <div class="portfolio-gallery">
+        <h2>풍경</h2>
+        <div class="portfolio-card">
+          <img src="photo1.jpg" alt="작품 1">
+          <div class="portfolio-card-content">
+            <h3>작품 1</h3>
+            <p>자연의 아름다움을 담은 순간</p>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <img src="portfolio2.jpg" alt="작품 2">
+          <div class="portfolio-card-content">
+            <h3>작품 2</h3>
+            <p>도시 속의 평화로운 순간</p>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <img src="portfolio3.jpg" alt="작품 3">
+          <div class="portfolio-card-content">
+            <h3>작품 3</h3>
+            <p>사람들의 일상적인 순간을 담다</p>
+          </div>
+        </div>
+        <!-- Add more portfolio items as needed -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 굴러들어온 일상. @_coro_photo All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

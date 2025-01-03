@@ -147,6 +147,66 @@ footer {
       <h1>나의 발자취</h1>
       <p>그동안 제가 담아온 작품들을 소개합니다.</p>
     </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4-Column Photo Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            max-width: 1200px;
+            width: 100%;
+            padding: 16px;
+        }
+        .gallery a {
+            display: block;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .gallery a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <a href="https://example.com/site1" target="_blank">
+            <img src="https://via.placeholder.com/300" alt="Preview 1">
+        </a>
+        <a href="https://example.com/site2" target="_blank">
+            <img src="https://via.placeholder.com/300" alt="Preview 2">
+        </a>
+        <a href="https://example.com/site3" target="_blank">
+            <img src="https://via.placeholder.com/300" alt="Preview 3">
+        </a>
+        <a href="https://example.com/site4" target="_blank">
+            <img src="https://via.placeholder.com/300" alt="Preview 4">
+        </a>
+    </div>
+</body>
+</html>
 
     <div class="portfolio-gallery">
         <h2>풍경</h2>
